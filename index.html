@@ -11,27 +11,27 @@
 <body>
     <div class="container">
         <div class="board">
-            <div class="screen">123456789</div>
+            <div id="value-screen" class="screen">123456789</div>
         </div>
         <div class="button-holder">
-            <button class="grid-item">AC</button>
+            <button class="grid-item" onclick="clearScreen()">AC</button>
             <button class="grid-item">+/-</button>
             <button class="grid-item">%</button>
             <button class="grid-item">/</button>
-            <button class="grid-item">1</button>
-            <button class="grid-item">2</button>
-            <button class="grid-item">3</button>
+            <button class="grid-item" onclick="num1()">1</button>
+            <button class="grid-item" onclick="num2()">2</button>
+            <button class="grid-item" onclick="num3()">3</button>
             <button class="grid-item">x</button>
-            <button class="grid-item">4</button>
-            <button class="grid-item">5</button>
-            <button class="grid-item">6</button>
+            <button class="grid-item" onclick="num4()">4</button>
+            <button class="grid-item" onclick="num5()">5</button>
+            <button class="grid-item" onclick="num6()">6</button>
             <button class="grid-item">-</button>
-            <button class="grid-item">7</button>
-            <button class="grid-item">8</button>
-            <button class="grid-item">9</button>
+            <button class="grid-item" onclick="num7()">7</button>
+            <button class="grid-item" onclick="num8()">8</button>
+            <button class="grid-item" onclick="num9()">9</button>
             <button class="grid-item">+</button>
-            <button class="grid-item">0</button>
-            <button class="grid-item">.</button>
+            <button class="grid-item" onclick="num0()">0</button>
+            <button class="grid-item" onclick="decimal()">.</button>
             <button id="equal" class="grid-item">=</button>
         </div>    
     </div>
