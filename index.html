@@ -11,28 +11,28 @@
 <body>
     <div class="container">
         <div class="board">
-            <div id="value-screen" class="screen">123456789</div>
+            <div id="value-screen" class="screen"></div>
         </div>
         <div class="button-holder">
             <button class="grid-item" onclick="clearScreen()">AC</button>
-            <button class="grid-item">+/-</button>
-            <button class="grid-item">%</button>
-            <button class="grid-item">/</button>
+            <button class="grid-item" onclick="positivenegative()">+/-</button>
+            <button class="grid-item" onclick="modulo()">%</button>
+            <button class="grid-item" onclick="divide()">/</button>
             <button class="grid-item" onclick="num1()">1</button>
             <button class="grid-item" onclick="num2()">2</button>
             <button class="grid-item" onclick="num3()">3</button>
-            <button class="grid-item">x</button>
+            <button class="grid-item" onclick="multiply()">x</button>
             <button class="grid-item" onclick="num4()">4</button>
             <button class="grid-item" onclick="num5()">5</button>
             <button class="grid-item" onclick="num6()">6</button>
-            <button class="grid-item">-</button>
+            <button class="grid-item" onclick="subtract()">-</button>
             <button class="grid-item" onclick="num7()">7</button>
             <button class="grid-item" onclick="num8()">8</button>
             <button class="grid-item" onclick="num9()">9</button>
-            <button class="grid-item">+</button>
+            <button class="grid-item" onclick="add()">+</button>
             <button class="grid-item" onclick="num0()">0</button>
             <button class="grid-item" onclick="decimal()">.</button>
-            <button id="equal" class="grid-item">=</button>
+            <button id="equal" class="grid-item"onclick="equal()">=</button>
         </div>    
     </div>
 </body>
