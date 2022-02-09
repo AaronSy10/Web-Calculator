@@ -93,7 +93,7 @@ function positivenegative(){
     }
     else if (currentNumI < 0){
         currentNumI = currentNumI * -1;
-        document.getElementById("value-screen").innerHTML = firstNumI.toString();
+        document.getElementById("value-screen").innerHTML = currentNumI.toString();
     }
     else if (currentNumS == "-"){
         document.getElementById("value-screen").innerHTML = "";
