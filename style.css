@@ -6,21 +6,28 @@
     position: relative;
     width: 500px;
     height: 875px;
-    outline: 1px solid black;
     margin: auto;
     transform: translate(0,5%);
     border-radius: 20px;
+    background-color: rgba(243, 165, 178, 0.863);
 }
 
+.screen-container{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    top: 20px;
+    background-color: rgba(255, 255, 255, .5); 
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
 .board{
     position: relative;
     overflow-y:hidden;
     width: 450px;
     height: 250px;
-    border: 1px solid black;
     margin: auto;
-    top:20px;
-    border-radius: 20px;
     text-align: end;
     display:flex;
     align-items:flex-end;
@@ -28,15 +35,13 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     box-sizing: border-box;
-    padding-right: 15px;
+    padding-right: 15px;  
 }
 
 .screen {
     position: relative;
     width: 435px;
     height: 50px;
-    top: 20px;
-    border: 1px solid black;
     text-align: right;
     line-height: 50px;
     padding-right: 15px;
@@ -61,7 +66,8 @@
 .grid-item{
     position: relative;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    border: 0px solid rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     padding: 20px;
     font-size: 30px;
