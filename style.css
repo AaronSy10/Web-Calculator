@@ -14,20 +14,29 @@
 
 .board{
     position: relative;
+    overflow-y:hidden;
     width: 450px;
-    height: 300px;
+    height: 250px;
     border: 1px solid black;
     margin: auto;
     top:20px;
     border-radius: 20px;
+    text-align: end;
+    display:flex;
+    align-items:flex-end;
+    justify-content: end;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    box-sizing: border-box;
+    padding-right: 15px;
 }
 
 .screen {
-    position: absolute;
+    position: relative;
     width: 435px;
     height: 50px;
-    /*border: 1px solid black;*/
-    bottom: 0%;
+    top: 20px;
+    border: 1px solid black;
     text-align: right;
     line-height: 50px;
     padding-right: 15px;
@@ -35,6 +44,7 @@
     font-family: Arial, Helvetica, sans-serif;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: auto;
 }
 
 .button-holder{
