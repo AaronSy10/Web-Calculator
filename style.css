@@ -5,7 +5,7 @@
 .container{
     position: relative;
     width: 500px;
-    height: 800px;
+    height: 875px;
     outline: 1px solid black;
     margin: auto;
     transform: translate(0,5%);
@@ -36,16 +36,14 @@
 }
 
 .button-holder{
-    position: ab;
+    position: relative;
     width: 450px;
-    height: 450px;
-    /*border: 1px solid black;*/
-    margin-left: 5%;
-    margin-top: 6%;
+    height: 500px;
+    top: 5%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 105px 105px 105px 105px;
     grid-gap: 10px 10px;
-    
+    margin: auto;
 }
 
 .grid-item{
@@ -57,6 +55,7 @@
     font-size: 30px;
     text-align: center;
     user-select: none;
+    
 }
 
 .grid-item:active{

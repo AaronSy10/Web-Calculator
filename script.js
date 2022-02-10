@@ -1,7 +1,16 @@
-/*-----------------------------------------numbers----------------------------------------*/
+var resultI;
+/*-----------------------------------------buttons----------------------------------------*/
 
 function clearScreen(){
     document.getElementById("value-screen").innerHTML = "";
+}
+
+function ans(){
+    document.getElementById("value-screen").innerHTML = resultI;
+}
+
+function del(){
+    document.getElementById("value-screen").innerHTML = document.getElementById("value-screen").textContent.slice(0,-1);
 }
 
 function num1(){
@@ -48,85 +57,42 @@ function decimal(){
     document.getElementById("value-screen").innerHTML += ".";
 }
 
-/*-----------------------------------------operations----------------------------------------*/
-var firstNumI,firstNumS,resultI,resultS,op;
 function add(){
-    firstNumS = document.getElementById("value-screen").textContent;
-    firstNumI = parseInt(firstNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    op = 1;
+    document.getElementById("value-screen").innerHTML += "+";
 }
 
 function subtract(){
-    firstNumS = document.getElementById("value-screen").textContent;
-    firstNumI = parseInt(firstNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    op = 2;
+    document.getElementById("value-screen").innerHTML += "-";
 }
 
 function multiply(){
-    firstNumS = document.getElementById("value-screen").textContent;
-    firstNumI = parseInt(firstNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    op = 3;
+    document.getElementById("value-screen").innerHTML += "*";
 }
 
 function divide(){
-    firstNumS = document.getElementById("value-screen").textContent;
-    firstNumI = parseInt(firstNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    op = 4;
+    document.getElementById("value-screen").innerHTML += "/";
 }
 
 function modulo(){
-    firstNumS = document.getElementById("value-screen").textContent;
-    firstNumI = parseInt(firstNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    op = 5;
+    document.getElementById("value-screen").innerHTML += "%";
+}
+
+function lParenthesis(){
+    document.getElementById("value-screen").innerHTML += "(";
+}
+
+function rParenthesis(){
+    document.getElementById("value-screen").innerHTML += ")";
 }
 
 function positivenegative(){
-    var currentNumS = document.getElementById("value-screen").textContent;
-    var currentNumI = parseInt(currentNumS);
-    if (currentNumI > 0 || currentNumS == ""){
-        document.getElementById("value-screen").innerHTML = "-".concat(currentNumS);
-    }
-    else if (currentNumI < 0){
-        currentNumI = currentNumI * -1;
-        document.getElementById("value-screen").innerHTML = currentNumI.toString();
-    }
-    else if (currentNumS == "-"){
-        document.getElementById("value-screen").innerHTML = "";
-    }
+    document.getElementById("value-screen").innerHTML += "-";
 }
 
+/*-----------------------------------------operations----------------------------------------*/
+
 function equal(){
-    var secondNumS = document.getElementById("value-screen").textContent;
-    var secondNumI = parseInt(secondNumS);
-    document.getElementById("value-screen").innerHTML = "";
-    if (op==1){
-        resultI = firstNumI + secondNumI;
-        resultS = resultI.toString();
-        document.getElementById("value-screen").innerHTML = resultS;
-    }
-    else if (op==2){
-        resultI = firstNumI - secondNumI;
-        resultS = resultI.toString();
-        document.getElementById("value-screen").innerHTML = resultS;
-    }
-    else if (op==3){
-        resultI = firstNumI * secondNumI;
-        resultS = resultI.toString();
-        document.getElementById("value-screen").innerHTML = resultS;
-    }
-    else if (op==4){
-        resultI = firstNumI / secondNumI;
-        resultS = resultI.toString();
-        document.getElementById("value-screen").innerHTML = resultS;
-    }
-    else if (op==5){
-        resultI = firstNumI % secondNumI;
-        resultS = resultI.toString();
-        document.getElementById("value-screen").innerHTML = resultS;
-    }
+    var equation = document.getElementById("value-screen").textContent;
+    resultI = eval(equation);
+    document.getElementById("value-screen").innerHTML = resultI; 
 }
